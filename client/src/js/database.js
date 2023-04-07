@@ -42,3 +42,5 @@ export const getDb = async () => {
 };
 
 initdb();
+//puts something in the database to avoid errors
+putDb("Welcome to JAST! Start typing here!");
