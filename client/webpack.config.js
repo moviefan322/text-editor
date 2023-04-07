@@ -36,6 +36,8 @@ module.exports = () => {
         short_name: "JAST",
         description: "My awesome Text Editor!",
         background_color: "#ffffff",
+        publicPath: "./",
+        fingerprints: false,
         crossorigin: null, //can be null, use-credentials or anonymous
         icons: [
           {
