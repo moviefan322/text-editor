@@ -37,7 +37,12 @@ module.exports = () => {
         short_name: "JAST",
         description: "My awesome Text Editor!",
         background_color: "#ffffff",
+        start_url: "/",
+        theme_color: darkblue,
+        background_color: darkblue,
         publicPath: "./",
+        orientation: "portrait",
+        display: "standalone",
         fingerprints: false,
         crossorigin: null, //can be null, use-credentials or anonymous
         icons: [
