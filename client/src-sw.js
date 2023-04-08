@@ -24,9 +24,12 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
-registerRoute(({ request }) => request.mode === "navigate", pageCache);
-
 // TODO: Implement asset caching
+const assetCache = new CacheFirst({ cacheName: "asset-cache" });
+registerRoute(({ request }) => request.destination === "style", assetCache);
+registerRoute(({ request }) => request.destination === "script", assetCache);
+registerRoute(({ request }) => request.destination === "image", assetCache);
+registerRoute(({ request }) => request.mode === "navigate", pageCache);
 
 offlineFallback({
   pageFallback: "/index.html",
