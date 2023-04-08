@@ -27,7 +27,11 @@ module.exports = () => {
         title: "Just Another Text Editor",
       }),
       new MiniCssExtractPlugin(),
-      new GenerateSW(),
+      new GenerateSW({
+        swDest: "service-worker.js",
+        clientsClaim: true,
+        skipWaiting: true,
+      }),
       new WebpackPwaManifest({
         name: "Just Another Text Editor",
         short_name: "JAST",
